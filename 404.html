@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redireccionando...</title>
+    <script>
+      const segmentCount = 1; // Cambia esto si tu repositorio está en una subruta más profunda
+      const path = window.location.pathname.split('/').slice(segmentCount).join('/');
+      window.location.href = '/' + path;
+    </script>
+  </head>
+  <body>
+    <p>Redireccionando...</p>
+  </body>
+</html>
