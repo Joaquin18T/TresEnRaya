@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  background-color: #1E1E1E;
+  color: #fff;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.content-tablero{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-block-start: 10px;
+}
+
+.tablero{
+  display: grid;
+  grid-template: repeat(3, 100px)/repeat(3,100px);
+}
+
+.casilla{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #95a5a6;
+  font-size: 45px;
+  color: #bdc3c7;
+  text-shadow: 4px 3px 14px #bdc3c7;
+}
+
+.simbolo{
+  width: 80px;
+  height: 80px;
+}
+
+.casilla:nth-child(1){
+  border-bottom: none;
+}
+.casilla:nth-child(2){
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.casilla:nth-child(3){
+  border-bottom: none;
+}
+.casilla:nth-child(4){
+  border-bottom: none;
+}
+.casilla:nth-child(5){
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.casilla:nth-child(6){
+  border-bottom: none;
+}
+.casilla:nth-child(8){
+  border-left: none;
+  border-right: none;
+}
+
+
+.brillar{
+  box-shadow: 4px 2px 126px -27px rgba(255, 255, 255);
+  -webkit-box-shadow: 4px 2px 126px -27px rgba(255, 255, 255);
+  -moz-box-shadow: 4px 2px 126px -27px rgba(255, 255, 255);
+  background-color: #ffff;
+}
+
+.elements-game{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 65px;
+  margin-top: 10px;
+}
+span{
+  margin-bottom: 10px;
+}
+
+.contain-juego{
+  display: flex;
+  align-items: center;
+  margin-block-start: 10px;
+}
+.side-left{
+  width: 60vw;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  flex-direction: column;
+}
+.side-right{
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+
+}
+
+.content-historial{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height:50vh;
+  width: 25vw;
+  overflow-y: scroll;
+
+}
+
+.contain-home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block-start: 15%;
+}
+
+nav{
+  background-color: cornflowerblue;
+  padding-block: 10px;
+  padding-inline-start: 10px;
+}
+
+.element-historial{
+  inline-size: 100%;
+  margin-block-end: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-historial>span{
+  margin: 0;
+  inline-size: 65%;
+}
+
+.element-historial>button{
+  padding-inline: 5px;
+  margin-inline: 5px;
+}
+
+button{
+  background-color: #fff;
+  border: 1px solid gray;
+  width: max-content;
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+}
