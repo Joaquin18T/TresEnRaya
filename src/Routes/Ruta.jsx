@@ -14,7 +14,7 @@ export default function () {
   return (
     <>
       <Routes>
-        <Route path='TestPage' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route element={<Layout/>}>
           <Route path='game' element={<Juego/>}/>
           <Route path='info' element={<Info/>}/>
