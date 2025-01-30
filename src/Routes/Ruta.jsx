@@ -18,6 +18,7 @@ export default function () {
         <Route element={<Layout/>}>
           <Route path='game' element={<Juego/>}/>
           <Route path='info' element={<Info/>}/>
+          <Route path='*' />
         </Route>
       </Routes>
     </>
