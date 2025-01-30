@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/TresEnRaya/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Aplicación React</title>
+    <title>Vite + React</title>
     <script>
       // Redirige al usuario a la raíz de la aplicación si la ruta no existe
       const segmentCount = 1; // Cambia esto si tu repositorio está en una subruta más profunda
       const path = window.location.pathname.split('/').slice(segmentCount).join('/');
-      if (!window.location.pathname.startsWith('/nombre-del-repositorio/')) {
-        window.location.href = '/' + path;
+      if (!window.location.pathname.startsWith('/TresEnRaya/')) {
+        window.location.href = '/TresEnRaya/' + path;
       }
     </script>
+    <script type="module" crossorigin src="/TresEnRaya/assets/index-C0oI-ng9.js"></script>
+    <link rel="stylesheet" crossorigin href="/TresEnRaya/assets/index-CO4B4OaA.css">
   </head>
   <body>
     <div id="root"></div>
