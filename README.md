@@ -35,23 +35,16 @@ git commit -m "first commit"
 git remote add origin https://github.com/tu-usuario/nombre-del-repositorio.git
 ```
 
-**Paso 6:** Subir tu codigo al repositorio remoto.
-
-```
-git branch -M main
-git push -u origin main
-```
-
-**Paso 7:** En el archivo (si usas el enpaquetador vite) vite.config.js, agregar la propiedad **base** con el nombre de tu repositorio (debajo de la primera propiedad).
+**Paso 6:** En el archivo (si usas el enpaquetador vite) vite.config.js, agregar la propiedad **base** con el nombre de tu repositorio (debajo de la primera propiedad).
 
 `base:"/nombre-repositorio/"`
 
 
-**Paso 8:** Si tu proyecto esta routeado, entonces en el componente **BrowserRouter**, agregar la propiedad **basename** con el nombre de tu repositorio. Si no, salte este paso.
+**Paso 7:** Si tu proyecto esta routeado, entonces en el componente **BrowserRouter**, agregar la propiedad **basename** con el nombre de tu repositorio. Si no, salte este paso.
 
 `<BrowserRouter basename="/nombre-repositorio"...`
 
-**Paso 9:** Debido a **GitHub Pages no admite rutas del lado del cliente de forma nativa**, si no se configura Github Pages devolvera un error 404. Para ello hay que crear un archivo 404.html en la carpeta public con el siguiente codigo
+**Paso 8:** Debido a **GitHub Pages no admite rutas del lado del cliente de forma nativa**, si no se configura Github Pages devolvera un error 404. Para ello hay que crear un archivo 404.html en la carpeta public con el siguiente codigo
 
 ```
 <!DOCTYPE html>
@@ -70,6 +63,13 @@ git push -u origin main
     <p>Redireccionando...</p>
   </body>
 </html>
+```
+
+**Paso 9:** Subir tu codigo al repositorio remoto.
+
+```
+git branch -M main
+git push -u origin main
 ```
 
 **Paso 10:** Ahora se despliega el proyecto con los siguientes comandos.
