@@ -6,7 +6,7 @@ Primero crea un repositorio.
 
 `npm install gh-pages --save-dev`
 
-**Paso 2:** Configurar en el archivo package.json, en la seccion de *scripts* y agregar las siguientes lineas.
+**Paso 2:** Configurar en el archivo package.json, en la seccion de *scripts*, agregar las siguientes lineas.
 
 ```
 "predeploy": "npm run build"
@@ -16,7 +16,7 @@ Primero crea un repositorio.
 >[!NOTE]
 Si usas el empaquetador de [Vite](https://vite.dev/), en vez de `gh-pages -d build` cambia el build por el nombre **dist**. Esto es debido a que con Vite te crea una carpeta dist ya que lo usa como una carpeta de salida predeterminada para archivos construidos.
 
-**Paso 3:** En la superior, debajo de la propiedad **private**, agregar la propiedad **homepage** con la URL del repositorio creado.
+**Paso 3:** En la parte superior del mismo archivo, debajo de la propiedad **private**, agregar la propiedad **homepage** con la URL del repositorio creado.
 
 ```
 "homepage": "https://tu-usuario.github.io/nombre-del-repositorio"
