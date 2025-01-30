@@ -9,7 +9,7 @@
       const segmentCount = 1; // Cambia esto si tu repositorio está en una subruta más profunda
       const path = window.location.pathname.split('/').slice(segmentCount).join('/');
       if (!window.location.pathname.startsWith('/nombre-del-repositorio/')) {
-        window.location.href = '/TresEnRaya/' + path;
+        window.location.href = '/' + path;
       }
     </script>
   </head>
