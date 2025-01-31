@@ -48,38 +48,68 @@ git remote add origin https://github.com/tu-usuario/nombre-del-repositorio.git
 
 ```
 <!DOCTYPE html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redireccionando...</title>
-    <script>
-      const segmentCount = 1; // Cambia esto si tu repositorio está en una subruta más profunda
-      const path = window.location.pathname.split('/').slice(segmentCount).join('/');
-      window.location.href = '/' + path;
+    <meta charset="utf-8" />
+    <title>React Router</title>
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname.slice(1).split("/").slice(pathSegmentsToKeep).join("/").replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
     </script>
   </head>
-  <body>
-    <p>Redireccionando...</p>
-  </body>
+  <body></body>
 </html>
 ```
 
-**Paso 9:** Subir tu codigo al repositorio remoto.
+**Paso 9:** Agregar el siguiente script al archivo **index.html**. Sirve para que muestre la vista cuando se ingresa a una ruta desconocida
+
+```
+<script type="text/javascript">
+  (function (l) {
+    if (l.search[1] === "/") {
+      var decoded = l.search
+        .slice(1)
+        .split("&")
+        .map(function (s) {
+          return s.replace(/~and~/g, "&");
+        })
+        .join("?");
+      window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+    }
+  })(window.location);
+</script>
+```
+
+**Paso 10:** Subir tu codigo al repositorio remoto.
 
 ```
 git branch -M main
 git push -u origin main
 ```
 
-**Paso 10:** Ahora se despliega el proyecto con los siguientes comandos.
+**Paso 11:** Ahora se despliega el proyecto con los siguientes comandos.
 
 ```
 npm run build
 npm run deploy
 ```
 
-**Paso 11:** Una vez usado los comandos anteriores, ir a **actions** del repositorio y ver el workflow este con un check en verde (Si esta en amarillo, quiere decir que esta cargando).
+**Paso 12:** Una vez usado los comandos anteriores, ir a **actions** del repositorio y ver el workflow este con un check en verde (Si esta en amarillo, quiere decir que esta cargando). Si no te aparece esto, espera. Tarda un poco.
 
 Si esta con un check, ahora dirigete a **settings** y seleccionar la opcion de pages. Aca tendra que visualizar que la rama es `gh-pages` y la carpeta sea `root`. Si no lo tienes, seleccionalo y click en save. Con esto debe aparecerte un link al inicio de la vista.
 
