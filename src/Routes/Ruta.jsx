@@ -4,6 +4,7 @@ import Juego from '../Components/Juego'
 import Home from '../Home'
 import Layout from '../Layout'
 import Info from '../Info'
+import ErrorPage from '../ErrorPage'
 
 /**
  * Componente de las rutas del proyecto
@@ -18,7 +19,7 @@ export default function () {
         <Route element={<Layout/>}>
           <Route path='game' element={<Juego/>}/>
           <Route path='info' element={<Info/>}/>
-          <Route path='*' />
+          <Route path='*' element={<ErrorPage/>}/>
         </Route>
       </Routes>
     </>
