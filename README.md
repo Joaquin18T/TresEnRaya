@@ -104,10 +104,11 @@ git push -u origin main
 
 **Paso 11:** Ahora se despliega el proyecto con los siguientes comandos.
 
-```
-npm run build
-npm run deploy
-```
+`npm run build`
+Construye tu aplicacion
+
+`npm run deploy`
+Despliega tu aplicacion
 
 **Paso 12:** Una vez usado los comandos anteriores, ir a **actions** del repositorio y ver el workflow este con un check en verde (Si esta en amarillo, quiere decir que esta cargando). Si no te aparece esto, espera. Tarda un poco.
 
